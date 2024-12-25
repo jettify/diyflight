@@ -1,0 +1,22 @@
+[package]
+name = "externalleds"
+version = "0.1.0"
+authors = ["Nikolay Novik <nickolainovik@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+imxrt-hal = "0.5.9"
+imxrt-log = "0.1.2"
+log = "0.4.22"
+teensy4-panic = { version = "0.2", features = ["log"] }
+
+[dependencies.teensy4-bsp]
+version = "0.5"
+features = [
+  # Use the BSP's runtime.
+  "rt",
+]
+# Don't optimize build dependencies, like proc macros.
+# Helps with build times.
+[profile.release.build-override]
+opt-level = 0
