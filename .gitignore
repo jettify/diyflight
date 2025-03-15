@@ -2,4 +2,4 @@
 **/*.rs.bk
 /out
 *.hex
-part*/target
+p*/target
