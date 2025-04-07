@@ -3,3 +3,4 @@
 /out
 *.hex
 p*/target
+.DS_Store
